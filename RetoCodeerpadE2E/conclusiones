@@ -1,0 +1,26 @@
+CONCLUSIONES DEL EJERCICIO E2E
+
+1. Se implementó satisfactoriamente la automatización funcional del flujo de compra solicitado utilizando Serenity BDD y el patrón Screenplay.
+
+2. La arquitectura utilizada permite una alta mantenibilidad, reutilización y escalabilidad de los componentes de automatización.
+
+3. La configuración de credenciales y URL fue externalizada para evitar dependencias directas dentro del código fuente.
+
+4. Se implementó parametrización de datos para el proceso de Checkout mediante DataTable y modelo de datos, mejorando la reutilización de escenarios.
+
+5. Serenity BDD generó evidencia automática de ejecución, incluyendo capturas de pantalla y trazabilidad de cada paso ejecutado.
+
+6. El flujo validado cubre los siguientes procesos críticos:
+   - Inicio de sesión.
+   - Adición de productos al carrito.
+   - Visualización del carrito.
+   - Checkout.
+   - Confirmación de compra.
+
+7. Durante la ejecución no se identificaron defectos funcionales que impidieran completar exitosamente el flujo de compra.
+
+8. La solución desarrollada sigue buenas prácticas de automatización, separación de responsabilidades y principios de mantenibilidad aplicados en proyectos empresariales.
+
+9. La automatización puede extenderse fácilmente para cubrir nuevos escenarios, diferentes usuarios, validaciones adicionales y pruebas de regresión.
+
+10. El reporte generado por Serenity permite analizar detalladamente cada ejecución y facilita la identificación de posibles incidencias futuras.

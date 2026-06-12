@@ -1,0 +1,32 @@
+CONCLUSIONES DEL EJERCICIO API
+
+1. Se implementó exitosamente la automatización del flujo CRUD solicitado utilizando Karate Framework.
+2. Se validó correctamente la creación de una mascota mediante la API pública PetStore.
+3. Se verificó la consulta de la mascota creada utilizando el identificador generado por el servicio.
+4. Se actualizó satisfactoriamente el nombre y el estado de la mascota al valor "sold".
+5. Se confirmó la persistencia de la información mediante la consulta posterior utilizando el endpoint de búsqueda por estado.
+6. Se implementaron validaciones funcionales sobre códigos de respuesta HTTP y contenido de las respuestas recibidas.
+7. Se utilizaron datos externos para la creación de la mascota, promoviendo la reutilización y mantenibilidad de la solución.
+8. La solución desarrollada permite ampliar fácilmente la cobertura para nuevos escenarios funcionales y pruebas de regresión.
+9. Los reportes generados por Karate proporcionan trazabilidad completa de las solicitudes, respuestas y validaciones ejecutadas durante la prueba.
+10. La automatización cumple satisfactoriamente con los requerimientos planteados para el ejercicio técnico.
+
+HALLAZGOS
+
+- Durante la implementación se identificó que la API pública PetStore genera automáticamente el identificador de la mascota, por lo que la automatización fue adaptada para reutilizar dinámicamente dicho valor en las operaciones posteriores.
+- Se observó que algunos endpoints del servicio presentan comportamientos variables dependiendo de la estructura del payload enviado, por lo que se utilizó un cuerpo de actualización completo para garantizar la estabilidad de la prueba.
+- No se identificaron defectos funcionales que impidieran completar el flujo solicitado.
+
+APRENDIZAJES
+
+1. Para la implementación de la automatización API se utilizó Karate Framework 2.0.0, versión con la que no se tenía experiencia previa, representando una oportunidad de aprendizaje durante el desarrollo del ejercicio.
+2. Durante la configuración inicial se identificaron diferencias importantes respecto a Karate 1.x, principalmente en la gestión de dependencias, paquetes y compatibilidad con versiones recientes de Java.
+3. Uno de los principales retos encontrados fue la compatibilidad entre Karate 1.4.1 y Java 24. Debido a limitaciones relacionadas con dependencias internas de GraalVM, fue necesario migrar a Karate 2.0.0 para garantizar la correcta ejecución sobre Java 24.
+4. Durante la migración se evidenciaron cambios en la forma de interpretar expresiones dinámicas dentro de archivos JSON y cuerpos de petición, especialmente en el uso de variables dentro de payloads, lo que requirió adaptar la construcción de algunos request para asegurar su correcta evaluación.
+5. Se observó que la API pública PetStore genera automáticamente el identificador de las mascotas, por lo que la estrategia de automatización fue ajustada para reutilizar dinámicamente el ID retornado por la respuesta en las operaciones posteriores del flujo.
+6. La experiencia permitió comprender las diferencias entre las versiones de Karate y la importancia de validar la compatibilidad entre framework, librerías asociadas y versión de Java utilizada antes de iniciar un proyecto de automatización.
+7. Karate 2.0.0 demostró ser una alternativa moderna y compatible con versiones recientes de Java, manteniendo la simplicidad característica del framework para la automatización de servicios REST.
+
+CONCLUSIÓN GENERAL
+
+La solución implementada cumple satisfactoriamente los requerimientos planteados para el ejercicio técnico. Adicionalmente, la adopción de Karate Framework 2.0.0 permitió resolver desafíos de compatibilidad con Java 24 y ampliar el conocimiento sobre las nuevas capacidades y cambios introducidos respecto a versiones anteriores del framework.

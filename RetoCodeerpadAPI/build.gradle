@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.tuusuario.quantum'
+version = '1.0.0'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(24)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    karateVersion = '2.0.0'
+    jupiterVersion = '5.10.1'
+}
+
+dependencies {
+
+    testImplementation "io.karatelabs:karate-junit6:${karateVersion}"
+    testImplementation "org.junit.jupiter:junit-jupiter:${jupiterVersion}"
+
+}
+
+test {
+
+    useJUnitPlatform()
+    systemProperties System.getProperties()
+
+    testLogging {
+        events "PASSED", "FAILED", "SKIPPED"
+    }
+}
+
+gradle.startParameter.continueOnFailure = true

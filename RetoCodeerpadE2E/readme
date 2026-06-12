@@ -1,0 +1,112 @@
+RETO TÉCNICO – AUTOMATIZACIÓN E2E
+
+Tecnologías utilizadas:
+
+- Java 24
+- Gradle
+- Serenity BDD
+- Screenplay Pattern
+- Cucumber
+- Selenium WebDriver
+- JUnit 5
+
+----------------a----------------------------------
+ESTRUCTURA DEL PROYECTO
+--------------------------------------------------
+
+src/main/java
+    ├── models
+    ├── questions
+    ├── tasks
+    ├── userinterfaces
+    └── utils
+
+src/test/java
+    ├── runners
+    └── stepdefinitions
+
+src/test/resources
+    └── features
+
+--------------------------------------------------
+REQUISITOS PREVIOS
+--------------------------------------------------
+
+1. Java JDK 24 instalado
+2. Gradle instalado o Gradle Wrapper incluido
+3. Google Chrome instalado
+4. Conexión a internet
+
+Verificar versiones:
+
+java --version
+
+gradle --version
+
+--------------------------------------------------
+EJECUCIÓN DEL PROYECTO
+--------------------------------------------------
+
+1. Abrir una terminal en la raíz del proyecto.
+
+2. Limpiar compilaciones anteriores:
+
+gradlew clean
+
+3. Ejecutar la automatización:
+
+gradlew test
+
+4. Generar reporte Serenity:
+
+gradlew aggregate
+
+También puede ejecutarse en un solo comando:
+
+./gradlew clean test aggregate
+
+--------------------------------------------------
+REPORTE DE EJECUCIÓN
+--------------------------------------------------
+
+Una vez finalizada la ejecución, el reporte se encuentra en:
+
+target/site/serenity/index.html
+
+Abrir el archivo index.html desde cualquier navegador.
+
+--------------------------------------------------
+ESCENARIO AUTOMATIZADO
+--------------------------------------------------
+
+Flujo E2E automatizado en SauceDemo:
+
+1. Ingreso a la aplicación.
+2. Inicio de sesión con usuario válido.
+3. Agregar dos productos al carrito.
+4. Visualizar carrito.
+5. Completar proceso de Checkout.
+6. Finalizar compra.
+7. Validar mensaje de confirmación:
+
+"Thank you for your order!"
+
+--------------------------------------------------
+PATRÓN IMPLEMENTADO
+--------------------------------------------------
+
+Screenplay Pattern con Serenity BDD.
+
+Principales componentes:
+
+- Tasks
+- Questions
+- Models
+- User Interfaces
+- Step Definitions
+
+--------------------------------------------------
+AUTOR
+--------------------------------------------------
+
+Brayan Miguel Sánchez Gaviria
